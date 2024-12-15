@@ -316,6 +316,18 @@ public interface NyloerConfig extends Config
 
 	@ConfigItem(
 		position = 15,
+		keyName = "customDarkenConfig",
+		name = "Custom Darken Config",
+		description = "Format: 22:2,29:4 or 22,26,29",
+		section = fontsSettings
+	)
+	default String customDarkenConfig()
+	{
+		return "";
+	}
+
+	@ConfigItem(
+		position = 15,
 		keyName = "customFontConfig",
 		name = "Font config",
 		description = "Config settings wave:melee/range/mage:color",

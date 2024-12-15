@@ -287,6 +287,9 @@ public class NyloerPlugin extends Plugin implements KeyListener
 				{
 					_makeDarkerT = client.getTickCount() + config.darkerWaveOffset();
 				}
+				if (customFontConfig.getDarkenWavesWithOffsets().containsKey(waveNumber)) {
+					_makeDarkerT = client.getTickCount() + customFontConfig.getDarkenWavesWithOffsets().get(waveNumber);
+				}
 			}
 			nyloers.add(nyloer);
 			nyloersIndexMap.put(nyloer.index, nyloer);
